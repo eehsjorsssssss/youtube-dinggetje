@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: creatomate-youtube-bridge
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: COMPOSIO_API_KEY
+        sync: false
